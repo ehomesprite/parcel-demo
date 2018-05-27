@@ -1,0 +1,14 @@
+{
+  "name": "parcel-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "parcel-bundler": "^1.8.1"
+  },
+  "scripts": {
+    "dev": "node ./build/parcel-dev.js"
+  }
+}
