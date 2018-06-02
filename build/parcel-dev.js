@@ -25,7 +25,7 @@ const file = path.join(__dirname, '..', './src/views/**/**/index.html');
 
 const bundler = new Bundler(file, {
   detailedReport: true,
-  watch: false,
+  // watch: false,
 });
 
 const main = async () => {

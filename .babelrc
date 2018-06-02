@@ -10,6 +10,7 @@
       "alias": {
         "utils": "./src/utils"
       }
-    }]
+    }],
+    "syntax-dynamic-import"
   ]
 }

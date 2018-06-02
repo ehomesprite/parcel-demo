@@ -3,27 +3,32 @@
 </template>
 
 <script>
+  import commonUtils from 'utils/common';
+
   export default {
     name: 'App',
     data() {
       return {
-        text: '测试文本',
+        text: '测试文本233',
       }
     },
     methods: {
-      async fn() {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            console.log(3);
-            resolve();
-          }, 3000);
-        });
+      // async fn() {
+      //   return new Promise(resolve => {
+      //     setTimeout(() => {
+      //       commonUtils.test();
+      //       resolve();
+      //     }, 3000);
+      //   });
+      // },
+      async init() {
+        console.log(1);
+        // await this.fn();
+        console.log(2)
       },
     },
-    async created() {
-      console.log(1);
-      await this.fn();
-      console.log(2)
+    created() {
+      this.init();
     },
   }
 </script>
