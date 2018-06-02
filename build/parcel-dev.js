@@ -4,8 +4,7 @@
 
 const Bundler = require('parcel-bundler');
 const path = require('path');
-
-const file = path.join(__dirname, '..', './src/views/page1/index.html');
+const file = path.join(__dirname, '..', './src/views/**/**/index.html');
 
 // const options = {
 //   outDir: './dist', // 将生成的文件放入输出目录下，默认为 dist
@@ -24,11 +23,13 @@ const file = path.join(__dirname, '..', './src/views/page1/index.html');
 //   detailedReport: false // 打印 bundles、资源、文件大小和使用时间的详细报告，默认为 false，只有在禁用监听状态时才打印报告
 // };
 
-const bundler = new Bundler(file, {});
+const bundler = new Bundler(file, {
+  production: true,
+});
 
-const f = async () => {
+const main = async () => {
   await bundler.bundle();
-  await bundler.serve(8080);
+  // await bundler.serve(8080);
 };
 
-f();
+main();

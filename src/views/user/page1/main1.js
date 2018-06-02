@@ -2,7 +2,7 @@
  * created by snowdrop on 2018/5/27
  */
 import _ from 'lodash';
-import '../../assets/main.css';
+import '../../../assets/main.css';
 // import backgroundSrc from './background.jpg';
 
 // const $background = document.createElement('div');
