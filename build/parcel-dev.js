@@ -24,12 +24,13 @@ const file = path.join(__dirname, '..', './src/views/**/**/index.html');
 // };
 
 const bundler = new Bundler(file, {
-  production: true,
+  detailedReport: true,
+  watch: false,
 });
 
 const main = async () => {
   await bundler.bundle();
-  // await bundler.serve(8080);
+  await bundler.serve(80);
 };
 
 main();

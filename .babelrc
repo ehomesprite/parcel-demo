@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", {
+      "useBuiltIns": true
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "utils": "./src/utils"
+      }
+    }]
+  ]
+}
