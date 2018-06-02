@@ -11,7 +11,8 @@
     "vue": "^2.5.16"
   },
   "scripts": {
-    "dev": "node ./build/parcel-dev.js"
+    "dev": "node ./build/parcel-dev.js",
+    "build": "node ./build/parcel-build.js"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^1.3.1",
