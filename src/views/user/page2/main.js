@@ -3,8 +3,18 @@
  */
 import('babel-polyfill').then(() => {
   const main = async () => {
-    const Vue = (await import('vue')).default;
+    const { default: Vue } = await import('vue');
+    const { default: commonUtils } = await import('utils/common');
     const App = () => import('./App');
+
+    const init = {
+      install(vue) {
+        vue.prototype.$utils = {
+          common: commonUtils,
+        };
+      },
+    };
+    Vue.use(init);
 
     new Vue({
       el: '#app',

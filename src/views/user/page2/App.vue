@@ -3,8 +3,6 @@
 </template>
 
 <script>
-  import commonUtils from 'utils/common';
-
   export default {
     name: 'App',
     data() {
@@ -16,16 +14,19 @@
       async fn() {
         return new Promise(resolve => {
           setTimeout(() => {
-            commonUtils.test();
+            this.$utils.common.test();
             resolve();
-          }, 3000);
+          }, 1000);
         });
       },
+      async init() {
+        console.log(1);
+        await this.fn();
+        console.log(2)
+      },
     },
-    async created() {
-      console.log(1);
-      await this.fn();
-      console.log(2)
+    created() {
+      this.init();
     },
   }
 </script>
